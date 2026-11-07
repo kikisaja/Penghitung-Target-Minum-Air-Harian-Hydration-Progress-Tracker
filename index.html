@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydration Progress Tracker 💧</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Hydration-Tracker</span>
+            <h1>💧 HYDRO TRACKER</h1>
+            <p>Pantau asupan air minum harianmu biar tetap segar!</p>
+        </header>
+
+        <!-- Visual Gelas Air dengan Gelombang Animasi -->
+        <div class="glass-container">
+            <div class="water-fill" id="water-fill">
+                <div class="wave"></div>
+            </div>
+            <div class="glass-info">
+                <span id="percentage-text">0%</span>
+                <small id="volume-text">0 / 2000 ml</small>
+            </div>
+        </div>
+
+        <!-- Tombol Aksi Tambah Air -->
+        <div class="action-buttons">
+            <button class="add-btn" data-amount="250">
+                <span class="btn-icon">🥤</span>
+                <span>+250 ml</span>
+                <small>1 Gelas</small>
+            </button>
+            <button class="add-btn" data-amount="500">
+                <span class="btn-icon">🍾</span>
+                <span>+500 ml</span>
+                <small>1 Botol</small>
+            </button>
+        </div>
+
+        <!-- Pengaturan Target & Reset -->
+        <div class="settings-box">
+            <div class="target-input-group">
+                <label for="target-input">Target Harian (ml):</label>
+                <input type="number" id="target-input" value="2000" min="500" step="100">
+            </div>
+            <button id="reset-btn" class="reset-btn">🔄 Reset</button>
+        </div>
+
+        <!-- Pesan Motivasi -->
+        <div class="status-card" id="status-card">
+            <p id="status-message">Ayo minum gelas pertamamu hari ini! 💦</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
